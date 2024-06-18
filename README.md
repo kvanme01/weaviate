@@ -9,6 +9,7 @@ This project implements a quote search functionality using Weaviate, a vector se
 - Python 3.x
 - Weaviate
 - Docker
+- npm (Node Package Manager)
 
 ## Installation and Setup
 
@@ -21,7 +22,6 @@ git clone https://github.com/kvanme01/weaviate.git
 ### 2. Install Dependencies
 
 ```bash
-pip install weaviate
 pip install transformers  # Install if not already installed
 pip install datasets  # Install if not already installed
 ```
@@ -30,6 +30,7 @@ pip install datasets  # Install if not already installed
 
 ```bash
 
+cd weaviate/weaviate-project
 docker-compose -f docker-compose.yml up -d
 
 ```
@@ -46,13 +47,12 @@ python configure.py
 jupyter notebook import.ipynb
 ```
 
-Run each cell in the notebook to import the dataset into Weaviate.
+Either run each cell in the notebook to import the dataset into Weaviate, or run the above command in terminal and open another window in terminal to execute the frontend. For the later, navigate back to the same directory, weaviate-prokject. 
 
 ### 6. Start the Frontend
 
 ```bash
-cd app
-npm install  # Install dependencies
+cd weaviate-frontend
 npm run dev  # Start the development server
 ```
 
